@@ -59,12 +59,21 @@ while 1:
         rating_percentage = user_rating/10 * 100
 
         # catagorise the media
-        if user_rating >= 8:
-            catagory = "A must read/watch"
-        if user_rating >= 5:
-            catagory = "Worth your time"
-        if user_rating < 5:
-            catagory = "Skip it"
+        match user_rating:
+            case 10 | 9 | 8:
+                catagory = "A must read/watch"
+            case 7 | 6 | 5:
+                catagory = "Worth your time"
+            case 4 | 3 | 2 | 1 | 0:
+                catagory = "Skip it"
+        
+        print(catagory)
+#        if user_rating >= 8:
+#            catagory = "A must read/watch"
+#        if user_rating >= 5:
+#            catagory = "Worth your time"
+#        if user_rating < 5:
+#            catagory = "Skip it"
 
     elif p.lower().strip() == "q":
         break
