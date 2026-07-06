@@ -67,13 +67,14 @@ while 1:
             case 4 | 3 | 2 | 1 | 0:
                 catagory = "Skip it"
         
-        print(catagory)
 #        if user_rating >= 8:
 #            catagory = "A must read/watch"
 #        if user_rating >= 5:
 #            catagory = "Worth your time"
 #        if user_rating < 5:
 #            catagory = "Skip it"
+
+        print(catagory)
 
     elif p.lower().strip() == "q":
         break
