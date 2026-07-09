@@ -47,7 +47,13 @@ Print the even numbers from 2 to 10 using `range()` with a step of 2.
 10
 ```
 
-**Q3 — roll call** *(iterating a list)*
+**Q3 — how many?** *(len)*
+Using list `books = ["The Martian", "Stardust", "Blood Reaver"]` , print a sentence with `len()`.
+
+```
+You have 3 books on your shelf.
+```
+**Q4 — roll call** *(iterating a list)*
 Start with the list `books = ["Dune", "1984", "Emma"]`. Loop over it and print each title on its own line with a dash in front.
 
 ```
@@ -56,15 +62,9 @@ Start with the list `books = ["Dune", "1984", "Emma"]`. Loop over it and print e
 - Emma
 ```
 
-**Q4 — how many?** *(len)*
-Using list `books = ["The Martian", "Stardust", "Blood Reaver"]` , print a sentence with `len()`.
-
-```
-You have 3 books on your shelf.
-```
-
 **Q5 — first and last** *(indexing)*
 Using the same list, print the first title with `[0]` and the last with `[-1]` — without counting the items yourself.
+
 ```
 First: Dune
 Last: Emma
