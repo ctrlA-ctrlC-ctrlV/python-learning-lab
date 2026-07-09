@@ -1,6 +1,5 @@
-# Q3 — roll call (iterating a list)
+# Q4 — how many? (len)
 
-books = ["Dune", "1984", "Emma"]
+books = ["The Martian", "Stardust", "Blood Reaver"]
 
-for i in range(len(books)):
-    print(books[i])
+print(f"You have {len(books)} books on your shelf.")
