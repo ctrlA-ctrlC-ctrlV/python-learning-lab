@@ -22,16 +22,18 @@ while True:
         page = -1
 
 # calc total page length
-for i in range(len(page_list)):
-    total_page += page_list[i]
+# for i in range(len(page_list)):
+#     total_page += page_list[i]
+total_page = sum(page_list)
 
 # calc average page length
 avg_page_len = total_page/len(page_list)
 
 # find longest book
+page_highest = max(page_list)
 for i in range(len(page_list)):
-    if page_highest < page_list[i]:
-        page_highest = page_list[i]
+    # if page_highest < page_list[i]:
+    #     page_highest = page_list[i]
 
     if page_list[i] >= 400:
         chunky_cnt += 1
