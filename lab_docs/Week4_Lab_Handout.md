@@ -202,23 +202,32 @@ def set_age(age):
 
 Now `set_age(-5)` raises a clear error the caller can catch. You're defining the *contract* of your function: "I accept non-negative ages only."
 
-### 3.6 The re-prompt loop (memorize this shape)
+### 3.6 The re-prompt loop (you'll build this yourself)
 
-The single most useful pattern today — keep asking until the input is valid:
+The single most useful pattern today keeps asking until the input is valid. You now know every piece needed to build it — this section gives you the *idea*, not the code. Assembling it is your job, because you'll write your own version of this in almost every problem below.
+
+The shape combines four things you've already met:
+
+1. an *unconditional* loop that only ends when you decide (`while True`), from Week 2;
+2. a `try` around the risky conversion (3.2);
+3. a check that `raise`s your own `ValueError` when a value converts fine but is still out of range (3.5);
+4. a `return` on the success path — the *only* way out of the loop.
+
+**Your turn — complete this skeleton** so it keeps asking until it gets a positive whole number:
 
 ```python
 def get_positive_int(prompt):
     while True:
         try:
-            value = int(input(prompt))
-            if value <= 0:
+            value = ____________________       # read and convert
+            if ____________________:           # reject non-positive values
                 raise ValueError
-            return value            # valid → return ends the loop
+            return ____________________        # what ends the loop?
         except ValueError:
             print("Please enter a positive whole number.")
 ```
 
-Trace it: type `cat` → caught, asks again. Type `-3` → we `raise ValueError` → caught, asks again. Type `5` → returns `5`. You'll reuse this everywhere.
+**Then predict, before you run it**, what happens for each input in this sequence — write your prediction down, then test it: `cat`, then `-3`, then `5`. Which line catches each one, and why does the loop finally stop? If your prediction and the actual behaviour disagree, that gap is the thing to understand before moving on.
 
 ---
 
@@ -362,14 +371,8 @@ finally:
 # Enforce a rule
 if x < 0:
     raise ValueError("x must be >= 0")
-
-# Re-prompt until valid
-def get_int(prompt):
-    while True:
-        try:
-            return int(input(prompt))
-        except ValueError:
-            print("try again")
 ```
+
+**Re-prompt loop — the ingredients, not the recipe.** You'll write your own for the problems below. It combines: `while True:` · a `try` around the conversion · `raise ValueError` for values that convert but are out of range · a `return` on success to break out. Sketch it on paper before you type it. (Section 3.6 has the skeleton to complete.)
 
 Good luck — ask a facilitator if you're stuck for more than a few minutes on *setup*; but wrestle with the *logic* yourself first. That struggle is the learning.
