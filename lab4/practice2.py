@@ -6,9 +6,13 @@ def square_print(n):
 
 square_print(2)
 
+# t = square_print(4) + square_print(5) # cannot proform change, will return type error
+
 # printing from the return value
 def square(n):
     return n*n
+
+print(square(3))
 
 t = square(4) + square(5)
 print(t)
