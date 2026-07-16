@@ -138,7 +138,7 @@ Chunky books (over 400): 2
 1. **Start empty.** Create `pages = []`. *(a new, empty list)*
 2. **Collect in a loop.** Use a `while True` loop: read input; if it's `done`, `break`; otherwise convert with `int()` and `.append()` it to `pages`. *(append + Week 2's menu loop)*
 3. **Count.** After the loop, print `len(pages)` in a sentence. *(len)*
-4. **Total.** Use a `for` loop to add every value into a `total`. *(accumulate)* — Python has `sum()`, but do it by hand once so you understand what it's doing.
+4. **Total.** Use a `for` loop to add every value into a `total`. *(accumulate)* — Python has ``, but do it by hand once so you understand what it's doing.
 5. **Average.** `total / len(pages)`, shown to one decimal with `:.1f`. *(arithmetic + f-string)*
 6. **Longest.** Track a `longest` variable; loop through and update it whenever you find a bigger value. *(comparison + accumulator)*
 7. **Chunky count.** Loop again and count how many are over 400 pages. *(count with a condition)*
