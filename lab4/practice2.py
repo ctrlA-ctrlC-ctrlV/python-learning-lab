@@ -10,4 +10,5 @@ square_print(2)
 def square(n):
     return n*n
 
-print(square(3))
+t = square(4) + square(5)
+print(t)
