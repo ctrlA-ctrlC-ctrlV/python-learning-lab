@@ -2,6 +2,7 @@
 
 def main():
     f = get_float(prompt="Enter temperatur in fahernheit (°F) >> ")
+    print(f"Fahrenheit: {f:.1f}")
     c = fahernheit_to_celsius(f)
     print(f"{f:.1f}°F = {c:.1f}°C")
 
