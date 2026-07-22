@@ -1,27 +1,29 @@
-# 1.2 Add, update, remove
+# Part 2 — Missing keys, safely
 
-# Step one
 contact = {
     # key: value    "email": "alice@example.com"
     "name": "Alice",
     "phone": "555-1234",    
 }
-print(contact)
 
-contact["email"] = "alice@example.com"  # add through assignment
-contact["phone"] = "555-9999"           # this can also edit the value
-print(contact)
+## 2.1 The crash
 
-# or through updated function
-contact.update({"age": "25"})           # it can create new entry
-contact.update({"phone": "555-1111"})   #or updated existing
-print(contact)
+# print(contact["age"])   # asking for entry that doesn't exist will raise a KeyError
 
 print("======================================================================")
 
-# Step two
-del contact["email"]    # remove dictionary entry by using keyword "del" and pointing at the key
-print(contact)
+## 2.2 Ask first with `in`
 
-contact.pop("age")      # or use dictionary's build in function "pop" to acheive the samething
-print(contact)
+if "age" in contact:
+    print(contact["age"])
+else:
+    print("No age on file.")
+
+## 2.3 Or use `.get()` with a fallback
+#age = contact.get("age")   # samething can be achieved with get() function, 
+                            # however if the entry doesn't exist it will crash
+                            
+age = contact.get("age", "unkown")  # so use "unkown" as a fallback, if the entry 
+                                    # doesn't exist it will print "unknow" instead.
+                                    # "unknown" can be replaced with anything else
+print(f"age >> {age}")
