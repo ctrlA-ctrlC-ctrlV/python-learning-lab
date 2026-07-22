@@ -25,7 +25,3 @@ print(contact)
 
 contact.pop("age")      # or use dictionary's build in function "pop" to acheive the samething
 print(contact)
-
-# print(contact)
-# print(contact["name"])
-# print(contact["phone"])
