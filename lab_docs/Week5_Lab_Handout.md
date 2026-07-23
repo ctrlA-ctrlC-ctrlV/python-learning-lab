@@ -115,7 +115,14 @@ If you write `for x in prices`, `x` is a **key**. Want values? `.values()`. Want
 
 ### 3.2 The tally pattern — build it yourself
 
-Counting how often each thing appears is *the* classic dictionary job (word counts, vote tallies, inventory). Here's the trap people hit first. Suppose you try:
+Counting how often each thing appears is *the* classic dictionary job (word counts, vote tallies, inventory). We'll count words. Start with this list so you have something concrete to run:
+
+```python
+words = ["apple", "banana", "apple", "cherry", "banana", "apple"]
+# goal: end up with {"apple": 3, "banana": 2, "cherry": 1}
+```
+
+Here's the trap people hit first. Suppose you try:
 
 ```python
 counts = {}
@@ -125,7 +132,7 @@ for word in words:
 
 **Predict it before reading on:** the first time a word appears, is its key already in `counts`? What error do you get? (You met this error in Part 2.)
 
-The fix uses the safe lookup you just learned. **Complete this skeleton:**
+The fix uses the safe lookup you just learned. **Complete this skeleton** (same `words` list as above):
 
 ```python
 counts = {}
@@ -133,7 +140,7 @@ for word in words:
     counts[word] = counts.get(word, ____) + 1   # what fallback makes the first count correct?
 ```
 
-Once it works, print the tallies. Try it with `.items()`, and try printing them in order with `for word in sorted(counts):`. This four-line pattern will follow you through the whole course — make sure you can write it from memory.
+Once it works, `counts` should equal `{"apple": 3, "banana": 2, "cherry": 1}`. Print the tallies. Try it with `.items()`, and try printing them in order with `for word in sorted(counts):`. This four-line pattern will follow you through the whole course — make sure you can write it from memory.
 
 ---
 
